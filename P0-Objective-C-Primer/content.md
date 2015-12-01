@@ -10,6 +10,7 @@ The second part Cheat sheet is for you to refer back later so that you don't hav
 ##What You Need To Know About Objective-C
 
 **.h and .m files**
+
 Objective-C separates the interface declaration and the implementation of a class in *.h* and *.m* files.
 
 The *.h* files contains declarations of methods, properties and instance variables that are accessible by other classes.
@@ -19,6 +20,7 @@ The *.m* files contain the implementation of all methods declared in the *.h* fi
 Conclusion: All functionality that shall be available to other classes needs to be placed in the *.h* file of a class, all implementations and all private functionality is placed in the *.m* file.
 
 **@interface and @implementation**
+
 Objective-C uses two further keywords to separate class interfaces and implementations: _@interface_ and _@implementation_. The scope of interface/implementation is defined by the keyword _@interface/@implementation_ followed by an _@end_.
 
 Example of an interface block:
@@ -63,6 +65,7 @@ Example of an implementation block:
 By convention each Objective-C class has an _@implementation_ block in it's _.m_ file. The _@implementation_ block provides implementations for all methods declared in the _@interface_ block of the class.
 
 **Properties and instance variables**
+
 Objective-C provides two different ways to store information within objects: instance variables and Properties.
 
 Instance variables should only be used to store objects/values that are exclusively used by the class itself. For any objects/values that should be accessible by other classes, a developer should use Properties.
@@ -109,6 +112,7 @@ MyObjectType *someName = [[MyObjectType alloc] init];
 ```
 
 **Method Syntax**
+
 Methods in Objective C have a leading + or - when they are declared, + methods are class (static) methods and - ones instance methods. You typically will have all your methods be instance (-) methods. To declare a method:
 
 ```
@@ -152,6 +156,7 @@ RandomObjectType *myRandomObject = [[RandomObjectType alloc] init];
 ```
 
 **Classes**
+
 To create a new class, ctrl-click on projectfiles and select "New File" and then select "Objective C Class", name it, and pick what it is a subclass of. Each class is divided into a .h and .m, referred to as the header and implementation files respectively.
 
 The header file is a summary of what the class contains, effectively a table of contents. You want to declare all public properties and methods in the .h file. Here is a general format of a header file we'll call MyClass.h:
@@ -212,6 +217,7 @@ In the .h file, declare all public methods and properties of the class.
 In the .m file, import any other classes you'll need, initialize the current class, implement all methods you declared in the header, and initialize all variables and properties as necessary. Careful - forgetting to initialize variables is a very common error.
 
 **Implementing initializers in custom classes**
+
 Once you add custom classes to your program you also need to provide custom initializers. The default initializer for Objective-C objects (subclasses of NSObject) is a method called *init*. If a developer wants to add a custom initializer for his class it has to follow a couple of conventions:
 
 * Always invoke the superclass (super) initializer first
@@ -270,6 +276,7 @@ For this example you could chain the initializers as following:
 The default *init* method calls the *initWithName* method with a default name.
 
 **Class variables**
+
 Technically Objective-C doesn't know the concept of class variables, however you can define *static* variables in the *.m* file of your class which will result in a behaviour very similar to class variables:
 
 ```
@@ -283,6 +290,7 @@ static NSInteger counter;
 ```
 
 **Subclassing**
+
 The superclass of an Objective-C object is defined as part of the _@interface_ block:
 
 ```
@@ -304,6 +312,7 @@ In the subclass one can access method implementations of the superclass by using
 ```
 
 **Private properties and methods**
+
 Private properties and methods can be declared in *Class extensions*. Class extensions should be part of the *.m* file and look as follows:
 
 ```
@@ -325,6 +334,7 @@ Private properties and methods can be declared in *Class extensions*. Class exte
 _@interface_ followed by empty parentheses indicate a class extension. Since this class extension is part of the _.m_ file all methods and properties declared here are not visible to other classes.
 
 **Printing to the console**
+
 Use the line:
 
 ```

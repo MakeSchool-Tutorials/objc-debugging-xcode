@@ -4,6 +4,7 @@ slug: xcode-lessons
 ---     
 
 **Xcode Lesson: Copying Files, Correctly**
+
 Whenever you add or move a file or folder into a project, this window pops up. Make sure you always check off the boxes like below:
 
 ![Copying files in XCode](./1-copyFiles.png "Copying files in XCode")
